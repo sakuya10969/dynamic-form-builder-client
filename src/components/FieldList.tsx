@@ -1,6 +1,7 @@
 import { Stack, Paper } from '@mantine/core';
-import type { FormField as FieldType } from '../hooks/useDynamicForm';
-import FormField from './FormField';
+
+import type { FormField as FieldType } from '@/hooks/useDynamicForm';
+import FormField from '@/components/FormField';
 
 interface FieldListProps {
   fields: FieldType[];

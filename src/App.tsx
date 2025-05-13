@@ -1,8 +1,9 @@
 import { Container, Button, Title, Center, Box } from '@mantine/core';
 import { useState } from 'react';
-import { useDynamicForm } from './hooks/useDynamicForm';
-import FieldList from './components/FieldList';
-import FieldSelector from './components/FieldSelector';
+
+import { useDynamicForm } from '@/hooks/useDynamicForm';
+import FieldList from '@/components/FieldList';
+import FieldSelector from '@/components/FieldSelector';
 
 function App() {
   const { fields, addField, removeField } = useDynamicForm();

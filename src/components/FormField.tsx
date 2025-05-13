@@ -1,5 +1,5 @@
 import { TextInput, NumberInput, Select, Button, Group, Box } from '@mantine/core';
-import type { FormField as FieldType } from '../hooks/useDynamicForm';
+import type { FormField as FieldType } from '@/hooks/useDynamicForm';
 
 interface FormFieldProps {
   field: FieldType;
