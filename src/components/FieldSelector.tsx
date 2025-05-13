@@ -1,6 +1,8 @@
 import { Modal, Button, Select, TextInput, Stack } from '@mantine/core';
 import { useState } from 'react';
 
+import { FIELD_TYPES } from '@/constants';
+
 interface FieldSelectorProps {
   opened: boolean;
   onClose: () => void;
@@ -32,11 +34,7 @@ const FieldSelector = ({ opened, onClose, onAdd }: FieldSelectorProps) => {
           label="フィールドタイプ"
           value={type}
           onChange={(value) => setType(value as 'text' | 'number' | 'select')}
-          data={[
-            { value: 'text', label: 'テキスト' },
-            { value: 'number', label: '数値' },
-            { value: 'select', label: 'セレクトボックス' },
-          ]}
+          data={FIELD_TYPES}
         />
         <Button onClick={handleAdd}>追加</Button>
       </Stack>
