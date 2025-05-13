@@ -9,14 +9,22 @@ function App() {
   const { fields, addField, removeField } = useDynamicForm();
   const [opened, setOpened] = useState(false);
 
+  const handleSubmit = () => {
+    alert("Hello World!!")
+  };
+
   return (
     <Center>
-      <Container size="sm" mt={20}>
+      <Container size="xl" mt={20}>
         <Title order={2}>動的フォーム作成ツール</Title>
         <Button onClick={() => setOpened(true)} mt="md">フィールドを追加</Button>
 
         <Box mt="xl">
-          <FieldList fields={fields} onRemove={removeField} />
+          <FieldList 
+            fields={fields} 
+            onRemove={removeField} 
+            onSubmit={handleSubmit}
+          />
         </Box>
         
         <FieldSelector
